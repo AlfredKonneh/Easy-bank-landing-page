@@ -323,8 +323,36 @@ a {
 .footer__list-item:first-child {
   margin-top: 0;
 }
+/* New rules added for tablets*/
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+  .grid--1x4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    align-items: center;
+    justify-items: center;
+  }
 
-@media screen and (min-width: 1024px) {
+  .block--hero {
+    background: var(--Very-light-gray);
+    background-image: url(./images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: 0 -43rem;
+    padding-top: 0;
+    overflow-y: hidden;
+  }
+
+  .block--footer .grid--1x4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1275px;
+  }
   h1 {
     font-size: 5.6rem;
   }
@@ -341,6 +369,7 @@ a {
   /* grid */
   .grid--1x2 {
     grid-template-columns: repeat(2, 50%);
+    gap: 5rem;
   }
 
   .grid--1x4 {
@@ -392,28 +421,25 @@ a {
 
   /* hero */
   .block--hero {
-    background-image: url('./images/bg-intro-desktop.svg');
-    background-position: 45rem 95%;
-    padding-bottom: 0;
-    padding-top: 0;
-    margin-top: 0;
-    overflow: hidden;
+    background-position: 60rem -25rem;
   }
   .hero__text-container {
     text-align: left;
     max-width: 447px;
-    align-self: center;
+    align-self: start;
   }
 
   .block--hero {
     overflow-y: hidden;
+    padding-bottom: 0;
   }
   .hero__image {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
+    min-width: 775px;
     order: 2;
-    margin-top: -5rem;
-    margin-right: -14rem;
-    justify-self: end;
+    margin-top: -15rem;
+    justify-self: left;
   }
 
   .hero__title {
@@ -427,11 +453,11 @@ a {
   /* block future */
   .block--future {
     text-align: left;
-    padding-top: 0;
   }
 
   .block--future__header {
     padding: 2rem;
+    max-width: 635px;
   }
 
   .future__tagline {
