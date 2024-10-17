@@ -326,7 +326,7 @@ a {
 /* New rules added for tablets*/
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 90%;
+    max-width: 80%;
   }
   .grid--1x4 {
     grid-template-columns: repeat(2, 1fr);
@@ -334,24 +334,11 @@ a {
     align-items: center;
     justify-items: center;
   }
-
-  .block--hero {
-    background: var(--Very-light-gray);
-    background-image: url(./images/bg-intro-desktop.svg);
-    background-repeat: no-repeat;
-    background-position: 0 -43rem;
-    padding-top: 0;
-    overflow-y: hidden;
-  }
-
-  .block--footer .grid--1x4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .container {
-    max-width: 1275px;
+    max-width: 1110px;
   }
   h1 {
     font-size: 5.6rem;
@@ -369,7 +356,6 @@ a {
   /* grid */
   .grid--1x2 {
     grid-template-columns: repeat(2, 50%);
-    gap: 5rem;
     gap: 5rem;
   }
 
@@ -422,25 +408,28 @@ a {
 
   /* hero */
   .block--hero {
-    background-position: 60rem -25rem;
+    background-image: url('./images/bg-intro-desktop.svg');
+    background-position: 60rem 90%;
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-top: 0;
+    overflow: hidden;
   }
   .hero__text-container {
     text-align: left;
     max-width: 447px;
-    align-self: start;
+    align-self: center;
   }
 
   .block--hero {
     overflow-y: hidden;
-    padding-bottom: 0;
   }
   .hero__image {
-    width: auto;
-    max-width: 100%;
-    min-width: 775px;
+    width: 100%;
     order: 2;
-    margin-top: -15rem;
-    justify-self: left;
+    margin-top: -5rem;
+    margin-right: -14rem;
+    justify-self: end;
   }
 
   .hero__title {
@@ -454,11 +443,11 @@ a {
   /* block future */
   .block--future {
     text-align: left;
+    padding-top: 0;
   }
 
   .block--future__header {
     padding: 2rem;
-    max-width: 635px;
   }
 
   .future__tagline {
