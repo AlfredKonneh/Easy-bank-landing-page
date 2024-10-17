@@ -370,6 +370,7 @@ a {
   .grid--1x2 {
     grid-template-columns: repeat(2, 50%);
     gap: 5rem;
+    gap: 5rem;
   }
 
   .grid--1x4 {
